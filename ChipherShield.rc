@@ -1,0 +1,275 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "include\resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 英语(美国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "include\\resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\ChipherShield.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\ChipherShield.ico"
+IDI_ICON1               ICON                    "res\\CLSDFOLD.ICO"
+IDI_ICON2               ICON                    "res\\CLIP04.ICO"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 234, 84
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About ChipherShield"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,7,7,20,20
+    LTEXT           "ChipherShield Version 1.1 release",IDC_STATIC,40,7,128,18,SS_NOPREFIX
+    LTEXT           "This software is freeware and distributed under the terms of the GNU General Public License. Please view the accompanying License.txt file for more information.\n\nUses the cryptlib Security Toolkit.",IDC_STATIC,7,34,220,43,SS_SUNKEN
+    DEFPUSHBUTTON   "OK",IDOK,177,7,50,16,WS_GROUP
+END
+
+IDD_ChipherShield_DIALOG DIALOGEX 0, 0, 296, 305
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "ChipherShield"
+MENU IDR_MENU1
+FONT 8, "Tahoma", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Select Files/Directories",IDC_STATIC,10,42,276,121
+    LTEXT           "Select the files or directories you want to encrypt/decrypt below. If a directory is selected then all files in it and its sub-directories are affected.",IDC_STATIC,52,6,234,31
+    CONTROL         105,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE | SS_SUNKEN,12,6,35,32
+    CONTROL         "",IDC_LV_FILE,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,24,54,252,78,WS_EX_ACCEPTFILES
+    PUSHBUTTON      "Clear List",IDC_BUT_CLEAR,24,140,60,14
+    PUSHBUTTON      "Remove Sel",IDC_BUT_REMOVE,90,140,60,14
+    PUSHBUTTON      "Add File",IDC_BUT_ADDFILE,156,140,54,14
+    PUSHBUTTON      "Add Directory",IDC_BUT_ADDDIR,216,140,60,14
+    GROUPBOX        "Progress",IDC_STATIC,10,241,276,55
+    GROUPBOX        "Passwords",IDC_STATIC,12,188,140,49
+    LTEXT           "File:",IDC_STATIC,18,263,24,10,SS_CENTERIMAGE,WS_EX_RIGHT
+    LTEXT           "Total:",IDC_STATIC,18,279,24,10,SS_CENTERIMAGE,WS_EX_RIGHT
+    CONTROL         "",IDC_PROG_FILE,"msctls_progress32",WS_BORDER,47,263,203,10
+    CONTROL         "",IDC_PROG_TOTAL,"msctls_progress32",WS_BORDER,47,279,203,10
+    COMBOBOX        IDC_COMBO_MODE,52,171,100,100,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Algorithm:",IDC_STATIC_ALGO,12,171,36,12,SS_CENTERIMAGE
+    LISTBOX         IDC_LIST_PWD,21,202,97,27,LBS_MULTIPLESEL | LBS_USETABSTOPS | LBS_NOINTEGRALHEIGHT | NOT WS_VISIBLE | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Action",IDC_STATIC,160,196,126,41
+    LTEXT           "Description of Algorithm goes here.",IDC_DESC,160,171,126,21,SS_SUNKEN
+    CONTROL         "Encrypt",IDC_RADIO_ENCRYPT,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,174,207,42,12
+    CONTROL         "Decrypt",IDC_RADIO_DECRYPT,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,174,219,42,12
+    DEFPUSHBUTTON   "Go!",IDC_BUT_GO,225,211,50,14
+    PUSHBUTTON      "+",IDC_PWD_ADD,125,202,17,11
+    PUSHBUTTON      "-",IDC_PWD_SUB,125,218,17,11
+    LTEXT           "0 %",IDC_PERCENT_FILE,255,263,25,10,SS_CENTERIMAGE
+    LTEXT           "0 %",IDC_PERCENT_TOTAL,255,279,25,10,SS_CENTERIMAGE
+    LTEXT           "Ready.",IDC_STATIC_FILE,48,249,230,9
+    LTEXT           "0 password(s) have been hidden. (Options -> Hide Passwords)",IDC_STATIC_PWDMSG,21,202,97,27,SS_SUNKEN
+END
+
+IDD_PWD_DIALOG DIALOGEX 0, 0, 202, 46
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Add Password"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT1,11,20,120,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "OK",IDOK,144,6,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,144,23,50,14
+    LTEXT           "Enter Password:",IDC_STATIC,18,6,90,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "FileDescription", "ChipherShield"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "ChipherShield.exe"
+            VALUE "OriginalFilename", "ChipherShield.exe"
+            VALUE "ProductName", "ChipherShield"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 227
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 77
+    END
+
+    IDD_ChipherShield_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 286
+        VERTGUIDE, 48
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 298
+    END
+
+    IDD_PWD_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 195
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 39
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP1             BITMAP                  "res\\logo.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "E&xit",                       ID_FILE_EXIT
+    END
+    POPUP "Options"
+    BEGIN
+        MENUITEM "Hide Passwords",              ID_OPTIONS_HIDEPWD, CHECKED
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// 24
+//
+
+1                       24                      "res\\ChipherShield.manifest"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About ChipherShield..."
+END
+
+#endif    // 英语(美国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\ChipherShield.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
